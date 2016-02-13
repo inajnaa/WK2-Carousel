@@ -23,6 +23,24 @@ class SettingsViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func didPressSignOut(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Are you sure?", message: "", preferredStyle: .ActionSheet)
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel) { (UIAlertAction) -> Void in
+        }
+        
+        alertController.addAction(cancelButton)
+        
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .Destructive) { (UIAlertAction) -> Void in
+            self.performSegueWithIdentifier("signOutSegue", sender: nil)
+        }
+        
+        alertController.addAction(signOutAction)
+        
+        presentViewController(alertController, animated: true) { () -> Void in
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -25,7 +25,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize =  introImage.image!.size
         scrollView.delegate = self
         
-  /*      imageOne.transform = CGAffineTransformMakeRotation(CGFloat (-25 * M_PI / 180))
+/*      imageOne.transform = CGAffineTransformMakeRotation(CGFloat (-25 * M_PI / 180))
         imageTwo.transform = CGAffineTransformMakeRotation(CGFloat (35 * M_PI / 180))
         imageThree.transform = CGAffineTransformMakeRotation(CGFloat (-45 * M_PI / 180))
         imageFour.transform = CGAffineTransformMakeRotation(CGFloat (30 * M_PI / 180))
@@ -34,7 +34,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
     }
     
- /*     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+/*    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         UIView.animateWithDuration(2) { () -> Void in
           self.imageOne.transform = CGAffineTransformIdentity
             self.imageOne.center.x = self.imageOne.center.x + 65

@@ -18,11 +18,14 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginNavBar: UIImageView!
+    @IBOutlet weak var fieldParentView: UIView!
     
     
     @IBAction func didPressBack(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -34,8 +37,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
         buttonInitialY = buttonParentView.frame.origin.y
-        buttonOffset = -15
-        0
+        buttonOffset = -110
         
         // Do any additional setup after loading the view.
     }
@@ -43,6 +45,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= -50 {
+            view.endEditing(true)
+        }
     }
     
     @IBAction func didPressSignin(sender: AnyObject) {
@@ -70,15 +78,32 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        loginNavBar.transform = transform
+        fieldParentView.transform = transform
+        loginNavBar.alpha = 0
+        fieldParentView.alpha = 0
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.loginNavBar.transform = CGAffineTransformIdentity
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            self.loginNavBar.alpha = 1
+            self.fieldParentView.alpha = 1
+        }
+    }
+    
     
     func keyboardWillShow(notification: NSNotification!) {
-        // Move the button up above keyboard
         buttonParentView.frame.origin.y = buttonInitialY + buttonOffset
-        // Scroll the scrollview up
         scrollView.contentOffset.y = scrollView.contentInset.bottom
     }
     
     func keyboardWillHide(notification: NSNotification!) {
+        buttonParentView.frame.origin.y = buttonInitialY
     }
     
 }

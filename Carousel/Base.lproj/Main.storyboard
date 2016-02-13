@@ -59,7 +59,7 @@
                                         <rect key="frame" x="21" y="1065" width="274" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="Ton-0z-tIj" kind="push" id="h4h-M5-r2E"/>
+                                            <segue destination="Ton-0z-tIj" kind="push" animates="NO" id="h4h-M5-r2E"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="Fzm-zZ-aCw">
@@ -142,7 +142,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="Xuj-An-vy6" userLabel="buttonParentView">
-                                        <rect key="frame" x="0.0" y="368" width="320" height="152"/>
+                                        <rect key="frame" x="0.0" y="322" width="320" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_buttons" id="qd1-Hy-jDn">
@@ -173,7 +173,9 @@
                         <outlet property="activityIndicator" destination="9P7-CL-OyQ" id="3iH-q2-Vm0"/>
                         <outlet property="buttonParentView" destination="Xuj-An-vy6" id="AYx-VS-O7B"/>
                         <outlet property="emailField" destination="GSq-cq-ohK" id="1xd-Ld-JRF"/>
+                        <outlet property="fieldParentView" destination="PoF-1d-iG5" id="igJ-wv-0Wd"/>
                         <outlet property="loginButton" destination="VQG-V3-qR2" id="c6e-KI-TFd"/>
+                        <outlet property="loginNavBar" destination="0v7-6B-jgx" id="qly-lA-QSO"/>
                         <outlet property="passwordField" destination="o8Q-u2-dxq" id="u56-Af-E3u"/>
                         <outlet property="scrollView" destination="XIg-Eb-Y8V" id="dgB-NM-6jH"/>
                         <segue destination="d6B-wf-Fsz" kind="modal" identifier="tutorialSegue" id="2OT-P4-m2e"/>
@@ -216,7 +218,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3JS-Ph-rLy">
-                                        <rect key="frame" x="661" y="486" width="279" height="48"/>
+                                        <rect key="frame" x="981" y="513" width="279" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <segue destination="xFF-jq-7fY" kind="modal" id="Odc-Dc-b1u"/>
@@ -322,7 +324,7 @@
                                         <rect key="frame" x="0.0" y="624" width="320" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="3uo-36-o0n" kind="modal" id="nZr-Sk-0Dj"/>
+                                            <action selector="didPressSignOut:" destination="K9P-ks-QrD" eventType="touchUpInside" id="5Nw-fD-qS6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -342,6 +344,7 @@
                     <size key="freeformSize" width="320" height="757"/>
                     <connections>
                         <outlet property="settingsScroll" destination="DFz-dg-G1R" id="HOL-ci-ebQ"/>
+                        <segue destination="3uo-36-o0n" kind="modal" identifier="signOutSegue" id="qz9-md-nIw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLd-xC-WZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
