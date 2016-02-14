@@ -12,6 +12,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var tutorialScroll: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var backupButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +20,27 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         tutorialScroll.contentSize = CGSize(width: 1280, height: 568)
         tutorialScroll.delegate = self
         // Do any additional setup after loading the view.
+        backupButton.alpha = 0
+
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         let page : Int = Int(round(scrollView.contentOffset.x / 320))
         pageControl.currentPage = page
+        
+        
+            if page == 3 {
+                self.pageControl.alpha = 0
+                UIView.animateWithDuration(1, animations: { () -> Void in
+                    self.backupButton.alpha = 1
+                })
+                
+            } else {
+                self.pageControl.alpha = 1
+            }
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
