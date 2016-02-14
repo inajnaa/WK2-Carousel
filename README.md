@@ -1,4 +1,4 @@
-# WK1-Dropbox
+# WK2-Carousel
 
 This is an iOS app mimicking the Carousel app.
 
