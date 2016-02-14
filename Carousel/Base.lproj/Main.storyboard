@@ -36,23 +36,19 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="IpV-oA-IIc">
-                                        <rect key="frame" x="-14" y="364" width="153" height="152"/>
+                                        <rect key="frame" x="46" y="749" width="153" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="mQt-Ty-yT9">
-                                        <rect key="frame" x="248" y="359" width="76" height="75"/>
+                                        <rect key="frame" x="201" y="749" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="jSo-R3-EtL">
-                                        <rect key="frame" x="98" y="469" width="76" height="76"/>
+                                        <rect key="frame" x="201" y="825" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="oad-LR-ocF">
-                                        <rect key="frame" x="143" y="369" width="76" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="FgD-B4-wXW">
-                                        <rect key="frame" x="195" y="422" width="76" height="75"/>
+                                        <rect key="frame" x="46" y="903" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R9D-0G-MP9">
@@ -63,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="Fzm-zZ-aCw">
-                                        <rect key="frame" x="227" y="484" width="76" height="75"/>
+                                        <rect key="frame" x="123" y="904" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RIb-r6-rYf">
@@ -73,6 +69,10 @@
                                             <segue destination="gC6-E0-cAX" kind="push" id="JDv-sg-fVw"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="FgD-B4-wXW">
+                                        <rect key="frame" x="201" y="904" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
