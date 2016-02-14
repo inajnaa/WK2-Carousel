@@ -5,6 +5,8 @@ This is an iOS app mimicking the Carousel app.
 Time spent: 12 hours
 
 Completed user stories:
+
+Initial Screen
 - Static photo tiles on the initial screen
 Sign In
 - Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
