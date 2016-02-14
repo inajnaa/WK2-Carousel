@@ -40,4 +40,4 @@ Optional: Display actual DropBox Terms
 
 Walkthrough of all user stories:
 
-![Demo](dropboxDemo.gif)
+![Demo](Demo.gif)
